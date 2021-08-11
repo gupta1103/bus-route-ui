@@ -11,7 +11,7 @@ class RouteTimingCellViewModel: NSObject {
     
     private var apiService = APIService()
     private var routeTimingList = [String: [RouteTiming]]()
-    private var routeTimingCellViewModel = [RouteTimingCellDetailViewModel]()
+//     private var routeTimingCellViewModel = [RouteTimingCellDetailViewModel]()
     private var routeTimingArray = [RouteTiming]()
 }
 
@@ -30,7 +30,7 @@ extension RouteTimingCellViewModel {
     }
         
     func numberOfRowsInSection() -> Int {
-        routeTimingCellViewModel = routeTimingArray.map { RouteTimingCellDetailViewModel(with: $0) }
+//         routeTimingCellViewModel = routeTimingArray.map { RouteTimingCellDetailViewModel(with: $0) }
         return routeTimingArray.count
     }
     
