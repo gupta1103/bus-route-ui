@@ -10,7 +10,7 @@ import UIKit
 class RouteInfoCellViewModel: NSObject {
     
     private var routeInfoArray = [RouteInfo]()
-    private var routeInfoCellViewModels = [RouteInfoCellDetailViewModel]()
+//     private var routeInfoCellViewModels = [RouteInfoCellDetailViewModel]()
     private var apiService = APIService()
     private var selectedCellIndex = IndexPath()
 
@@ -31,7 +31,7 @@ extension RouteInfoCellViewModel {
     }
     
     func numberOfItemsInSection() -> Int {
-        routeInfoCellViewModels = routeInfoArray.map { RouteInfoCellDetailViewModel(with: $0) }
+//         routeInfoCellViewModels = routeInfoArray.map { RouteInfoCellDetailViewModel(with: $0) }
         return routeInfoArray.count
     }
     
