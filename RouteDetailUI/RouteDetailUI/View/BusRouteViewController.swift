@@ -40,7 +40,8 @@ class BusRouteViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        styleViews()
+        styleCollectionView()
+        styleTableView()
         
         routeInfoCellViewModel.apiCallforRouteInfo {
             DispatchQueue.main.async {
@@ -58,7 +59,7 @@ class BusRouteViewController: UIViewController {
 
 extension BusRouteViewController {
     
-    private func styleViews() {
+    private func styleCollectionView() {
         self.view.addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 48),
@@ -66,7 +67,9 @@ extension BusRouteViewController {
             collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             collectionView.heightAnchor.constraint(equalToConstant: 160)
         ])
-        
+    }
+    
+    private func styleTableView() {
         self.view.addSubview(tableView)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 8),
